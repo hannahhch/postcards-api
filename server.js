@@ -8,7 +8,7 @@ const express = require('express'),
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-  `${MONGODB_URI}`, 
+  `${process.env.MONGODB_URI}`, 
   { useNewUrlParser: true, useUnifiedTopology: true });
 
 
