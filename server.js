@@ -8,7 +8,7 @@ const express = require('express'),
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-  `mongoose.connect('mongodb://${user}:${pass}@${uri}/${db}?authMechanism=MONGODB-CR')`, 
+  `mongodb://${process.env.dbuser}:${process.env.dbpassword}@ds259878.mlab.com:59878/heroku_s08cx6xg`, 
   { useNewUrlParser: true, useUnifiedTopology: true });
 
 
