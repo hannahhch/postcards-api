@@ -6,7 +6,8 @@ const express = require('express'),
   bodyParser = require('body-parser');
   
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://localhost/Postcarddb,`, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
